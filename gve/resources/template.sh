@@ -1,0 +1,11 @@
+PROJECT={{currentdir}}
+
+GOENV=$PROJECT/env
+DEPS=$GOENV/deps
+
+GOPATH=$DEPS:$PROJECT:$DEPS
+echo $PATH
+PATH=$PROJECT/bin:$DEPS/bin:$PATH
+
+export GOPATH
+export PATH
