@@ -1,7 +1,7 @@
 Supersimple virtual env for golang projects.
 
 ### Description 
-Manual change of `GOPATH` variable is annoying so instead you can do
+Manual change of `GOPATH` variable is annoying so instead you can execute following in your working dir
 
 ```sh
 $ ggg
