@@ -1,4 +1,4 @@
-**gve** is a virtual environment manager for go projects
+Supersimple virtual env for golang projects.
 
 ## Description 
 
@@ -10,5 +10,6 @@
 
 ## Contributors
 
-## Credits, Inspiration, Alternatives
-
+Maintainer: 
+Mairbek Khadikov
+mkhadikov at gmail.com
