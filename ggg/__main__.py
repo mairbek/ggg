@@ -4,12 +4,15 @@ import os, stat, sys
 from jinja2 import Environment, PackageLoader
 
 def init_env():
-    print 'Initializing gve'
-    env = Environment(loader=PackageLoader('gve', 'resources'))
+    print 'Initializing ggg'
+    env = Environment(loader=PackageLoader('ggg', 'resources'))
     t = env.get_template('template.sh')
 
     current_dir = os.getcwd()
     print 'Setting up project in dir `' + current_dir + '`'
+
+    source_dir = current_dir + '/src'
+    os.mkdir(source_dir)
 
     env_dir = current_dir + '/env'
     env_bin_dir = env_dir + '/bin'
@@ -20,7 +23,7 @@ def init_env():
 
     exe_path = env_bin_dir + '/activate'
     exe = open(exe_path, 'w+')
-    
+
     exe.write(t.render(currentdir=current_dir))
     exe.close()
     st = os.stat(exe_path)
@@ -30,7 +33,6 @@ def init_env():
 
 def main():
     init_env()
-    
 
 if __name__ == '__main__':
     main()
