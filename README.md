@@ -1,15 +1,26 @@
 Supersimple virtual env for golang projects.
 
-## Description 
+### Description 
+Manual change of `GOPATH` variable is annoying so instead you can do
 
-## Installation instructions
+```sh
+$ ggg
+$ source env/bin/activate
+```
 
-## Getting Help
+and **go** hacking.
 
-## Contribution guidelines
+### Installation instructions
 
-## Contributors
+0. `ggg` is written in python
+1. Clone project `git clone https://github.com/mairbek/ggg.git`
+2. Install jinja2 `pip install jinja2`
+3. Install ggg `sudo python setup.py install`
 
-Maintainer: 
-Mairbek Khadikov
-mkhadikov at gmail.com
+### Contribution guidelines
+
+It's a quick hack and version 0.1 so pull request are welcomed.
+
+### Contributors
+
+Mairbek Khadikov (mkhadikov at gmail.com)
