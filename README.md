@@ -8,7 +8,7 @@ $ ggg
 $ source env/bin/activate
 ```
 
-and start go hacking.
+and **go** hacking.
 
 ### Installation instructions
 
