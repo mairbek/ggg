@@ -1,7 +1,7 @@
 from setuptools import setup
 
 # resources go here
-resources = ['resources']
+resources = ['resources/*']
 
 setup(name = 'gve',
     version = '0.1-SNAPSHOT',
