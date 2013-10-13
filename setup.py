@@ -4,7 +4,7 @@ from setuptools import setup
 resources = ['resources/*']
 
 setup(name = 'ggg',
-    version = '0.1-SNAPSHOT',
+    version = '0.1',
     description = 'Virtual env for golang projects',
     author = 'Mairbek Khadikov',
     author_email = 'mkhadikov@gmail.com',
