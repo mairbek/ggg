@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 
-import os, stat, sys
+import os
+import stat
 from jinja2 import Environment, PackageLoader
+
 
 def init_env():
     print 'Initializing ggg'
@@ -31,8 +33,10 @@ def init_env():
     print 'Successfully configured environment'
     print 'To activate run `source env/bin/activate`'
 
+
 def main():
     init_env()
+
 
 if __name__ == '__main__':
     main()
