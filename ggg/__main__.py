@@ -2,13 +2,14 @@
 
 import os
 import stat
-from jinja2 import Environment, PackageLoader
+from os.path import realpath, dirname
 
 
 def init_env():
     print 'Initializing ggg'
-    env = Environment(loader=PackageLoader('ggg', 'resources'))
-    t = env.get_template('template.sh')
+    template_path = os.path.join(dirname(realpath(__file__)), 'resources', 'template.sh')
+    with open(template_path, 'r') as t:
+        contents = t.read()
 
     current_dir = os.getcwd()
     print 'Setting up project in dir `' + current_dir + '`'
@@ -24,14 +25,13 @@ def init_env():
     os.mkdir(env_dir + '/deps')
 
     exe_path = env_bin_dir + '/activate'
-    exe = open(exe_path, 'w+')
 
-    exe.write(t.render(currentdir=current_dir))
-    exe.close()
+    with open(exe_path, 'w') as exe:
+        exe.write(contents.replace("{{currentdir}}", current_dir))
     st = os.stat(exe_path)
     os.chmod(exe_path, st.st_mode | stat.S_IEXEC)
     print 'Successfully configured environment'
-    print 'To activate run `source env/bin/activate`'
+    print 'Run `source env/bin/activate` to activate'
 
 
 def main():
