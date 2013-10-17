@@ -14,17 +14,17 @@ def init_env():
     current_dir = os.getcwd()
     print 'Setting up project in dir `' + current_dir + '`'
 
-    source_dir = current_dir + '/src'
+    source_dir = os.path.join(current_dir, 'src')
     os.mkdir(source_dir)
 
-    env_dir = current_dir + '/env'
-    env_bin_dir = env_dir + '/bin'
+    env_dir = os.path.join(current_dir, 'env')
+    env_bin_dir = os.path.join(env_dir, 'bin')
 
     os.mkdir(env_dir)
     os.mkdir(env_bin_dir)
-    os.mkdir(env_dir + '/deps')
+    os.mkdir(os.path.join(env_dir, 'deps'))
 
-    exe_path = env_bin_dir + '/activate'
+    exe_path = os.path.join(env_bin_dir, 'activate')
 
     with open(exe_path, 'w') as exe:
         exe.write(contents.replace("{{currentdir}}", current_dir))
