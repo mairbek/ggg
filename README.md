@@ -14,8 +14,7 @@ and **go** hacking.
 
 0. `ggg` is written in python
 1. Clone project `git clone https://github.com/mairbek/ggg.git`
-2. Install jinja2 `pip install jinja2`
-3. Install ggg `sudo python setup.py install`
+2. Install ggg `sudo python setup.py install`
 
 ### Contribution guidelines
 
